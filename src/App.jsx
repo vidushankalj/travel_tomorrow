@@ -7,6 +7,7 @@ import Search from './components/Search';
 import Selections from './components/Selections';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
+import LoginSignup from './components/LoginSignup';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Search />
       <Selections />
       <Carousel />
+      <LoginSignup/>
       <Footer />
     </>
   );
