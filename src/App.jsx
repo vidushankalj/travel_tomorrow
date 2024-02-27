@@ -7,7 +7,9 @@ import Search from './components/Search';
 import Selections from './components/Selections';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
-import LoginSignup from './components/LoginSignup';
+import TravelPlacePage from './components/TravelPlacePage';
+import DestinationsPage from './components/Destinationspage';
+import Hotelspage from './components/Hotelspage';
 
 const App = () => {
   return (
@@ -18,7 +20,9 @@ const App = () => {
       <Search />
       <Selections />
       <Carousel />
-      <LoginSignup/>
+      <TravelPlacePage/>
+      <DestinationsPage/>
+      <Hotelspage/>
       <Footer />
     </>
   );
