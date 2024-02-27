@@ -27,12 +27,12 @@ const Carousel = () => {
   };
 
   return (
-    <section className='container px-4 my-12 h-3/4 relative'>
+    <section className='container px-4 my-12 relative'>
       
       <img src={CAROUSEL_DATA[currentIndex].url} alt='carousel-img' className='rounded-md carousel-image' />
       <div
         onClick={decrementIndex}
-        className='absolute left-8 top-1/2 -translate-y-1/2 bg-white rounded p-1 cursor-pointer'
+        className='absolute left-8 top-1/2 -translate-y-1/2 bg-white rounded p-1 cursor-pointer  '
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
