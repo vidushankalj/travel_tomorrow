@@ -11,7 +11,7 @@ import thalpe from '../assets/ThalpeBeach.jpg';
 
 const Selections = () => {
   return (
-    <section className='container px-4 grid gap-2 sm:grid-cols-3 sm:grid-rows-2'>
+    <section className='container px-4 grid gap-4  sm:grid-cols-3 sm:grid-rows-2'>
       <Selection figure={fort} caption='Galle Fort Clock Tower' />
       <Selection figure={hikka} caption='Hikkaduwa Beach' />
       <Selection figure={museum} caption='Galle Natianol Museum' />
