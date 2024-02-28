@@ -5,6 +5,7 @@ import Home from "../Pages/Home";
 import Destinationspage from "../Pages/Destinationspage";
 import Hotelspage from "../Pages/Hotelspage";
 import TravelPlacePage from "../Pages/TravelPlacePage";
+import Hotels from "../Pages/Hotels";
 
 export default function Router() {
     
@@ -25,7 +26,7 @@ export default function Router() {
                     <Route path="/" element={<Layout />}>
                         <Route path="/" element={<Home />} />
                         <Route path="destinations" element={<Destinationspage />} />
-                        <Route path="hotels" element={<Hotelspage />} />
+                        <Route path="hotels" element={<Hotels />} />
                         <Route path="travel" element={<TravelPlacePage />} />
                     </Route>
                 </Routes>
