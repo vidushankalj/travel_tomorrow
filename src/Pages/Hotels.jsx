@@ -17,7 +17,7 @@ import Footer from '../components/Footer';
 function Hotels() {
   return (
     <>
-    <Navbar/>
+    <Carousel/>
     <div className="container mx-auto mt-8">
       <h1 className="text-4xl font-bold mb-6">Hotels & Resturants</h1>
 
@@ -27,8 +27,6 @@ function Hotels() {
         ))}
       </div>
     </div>
-    <Carousel/>
-    <Footer/>
     </>
   )
 }
