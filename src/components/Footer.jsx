@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -7,19 +8,19 @@ const Footer = () => {
         <h1 className='px-2'>Travel Tommorow</h1>
         <ul className='flex flex-wrap'>
           <li className='p-0 px-2'>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className='p-0 px-2'>
-            <a href="/destinations">Destinations</a>
+            <Link to="/destinations">Destinations</Link>
           </li>
           <li className='p-0 px-2'>
-            <a href=''>Travel</a>
+            <Link to=''>Travel</Link>
           </li>
           <li className='p-0 px-2'>
-            <a href=''>Views</a>
+            <Link to=''>Views</Link>
           </li>
           <li className='p-0 px-2'>
-            <a href=''>Book</a>
+            <Link to=''>Book</Link>
           </li>
         </ul>
       </div>

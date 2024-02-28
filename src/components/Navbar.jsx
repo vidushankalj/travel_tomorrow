@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../ss/Logo1.png'
 import LoginSignup from './LoginSignup';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [navIsShown, setnavIsShown] = useState(false);
@@ -15,16 +16,16 @@ const Navbar = () => {
     <img src={logo} id='logo' className='logo'></img>
       <ul className='hidden md:flex'>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/destinations">Destinations</a>
+          <Link to="/destinations">Destinations</Link>
         </li>
         <li>
-          <a href="/hotels">Hotels</a>
+          <Link to="/hotels">Hotels</Link>
         </li>
         <li>
-          <a href="/travel">Views</a>
+          <Link to="/travel">Views</Link>
         </li>
       </ul>
       <div className='hidden md:flex'>
