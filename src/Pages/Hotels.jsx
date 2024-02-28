@@ -27,7 +27,6 @@ function Hotels() {
         ))}
       </div>
     </div>
-    
     </>
   )
 }
