@@ -9,7 +9,6 @@ function Home() {
   return (
     <>
         <Hero/>
-        <Destinations/>
         <Search/>
         <Selections/>
         <Carousel/>
