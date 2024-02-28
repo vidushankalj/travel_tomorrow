@@ -1,5 +1,5 @@
 import React from 'react';
-import Selection from './Selection';
+import Selection from '../components/Selections';
 
 const Hotelspage = () => {
   // Dummy data for destinations
