@@ -7,10 +7,10 @@ const Footer = () => {
         <h1 className='px-2'>Travel Tommorow</h1>
         <ul className='flex flex-wrap'>
           <li className='p-0 px-2'>
-            <a href=''>Home</a>
+            <a href="/">Home</a>
           </li>
           <li className='p-0 px-2'>
-            <a href=''>Destinations</a>
+            <a href="/destinations">Destinations</a>
           </li>
           <li className='p-0 px-2'>
             <a href=''>Travel</a>

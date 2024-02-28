@@ -15,16 +15,16 @@ const Navbar = () => {
     <img src={logo} id='logo' className='logo'></img>
       <ul className='hidden md:flex'>
         <li>
-          <a href=''>Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href=''>Destinations</a>
+          <a href="/destinations">Destinations</a>
         </li>
         <li>
-          <a href=''>Hotels</a>
+          <a href="/hotels">Hotels</a>
         </li>
         <li>
-          <a href=''>Views</a>
+          <a href="/travel">Views</a>
         </li>
       </ul>
       <div className='hidden md:flex'>
