@@ -12,7 +12,7 @@ const Navbar = () => {
   }
   const [showSignUp,setShowSignUp] = useState(false)
   return (
-    <nav className='flex justify-between items-center h-20 px-4 absolute top-0 left-0 z-10 w-full text-white bg-transparent'>
+    <nav className='flex justify-between items-center h-20 px-4 absolute top-0 left-0 z-10 w-full text-white bg-black'>
     <img src={logo} id='logo' className='logo'></img>
       <ul className='hidden md:flex'>
         <li>
