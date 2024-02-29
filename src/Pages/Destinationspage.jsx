@@ -1,5 +1,6 @@
 import React from 'react';
 import Selection from '../components/Selection';
+import bgVideo from '../assets/Des_Video.mp4';
 
 const DestinationsPage = () => {
   // Dummy data for destinations
@@ -15,6 +16,22 @@ const DestinationsPage = () => {
 
   return (
     <div className="container mx-auto mt-8">
+      <video
+        src={bgVideo}
+        className='w-full h-full object-cover mb-4'
+        autoPlay
+        loop
+        muted
+      />
+      <div className='absolute top-0 left-0 w-full h-full bg-gray-900/30'></div>
+
+      {/* <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="text-center text-white font-custom">
+          <h1 className="text-4xl font-bold mb-4">Discover Beautiful Destinations</h1>
+          <p className="text-lg mb-8">Sri Lanka, the jewel of the Indian Ocean, boasts a mesmerizing tapestry of natural wonders and cultural treasures.<br></br> From the golden beaches of Unawatuna to the ancient splendor of the Temple of the Tooth Relic,<br></br> the country invites you to explore its diverse landscapes and rich heritage.<br></br> Marvel at the serene Ruwanweli Maha Seya, stand in awe of the vibrant<br></br> Nallur Kovil, and soak in the spiritual ambiance of the Red Mosque in Colombo.<br></br>Discover the beauty of Sri Lanka, where every destination tells a unique story of history, spirituality, and natural beauty.</p>
+        </div>
+      </div> */}
+      
       <h1 className="text-4xl font-bold mb-6">Destinations</h1>
 
       <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-2">
