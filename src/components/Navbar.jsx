@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../ss/Logo1.png'
+import logo from '../../ss/Logo2 bt.png'
 import LoginSignup from './LoginSignup';
 import { Link } from 'react-router-dom';
 
@@ -12,20 +12,20 @@ const Navbar = () => {
   }
   const [showSignUp,setShowSignUp] = useState(false)
   return (
-    <nav className='flex justify-between items-center h-20 px-4 absolute top-0 left-0 z-10 w-full text-white bg-black'>
+    <nav className='flex justify-between items-center h-20 px-4 absolute top-0 left-0 z-10 w-full text-black bg-stone-50 backdrop-blur-md tracking-widest' >
     <img src={logo} id='logo' className='logo'></img>
-      <ul className='hidden md:flex'>
+      <ul className='hidden md:flex '>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className='text-base font-semibold'>Home</Link>
         </li>
         <li>
-          <Link to="/destinations">Destinations</Link>
+          <Link to="/destinations" className='text-base font-semibold'>Destinations</Link>
         </li>
         <li>
-          <Link to="/hotels">Hotels</Link>
+          <Link to="/hotels" className='text-base font-semibold'>Hotels</Link>
         </li>
         <li>
-          <Link to="/travel">Views</Link>
+          <Link to="/travel" className='text-base font-semibold'>Views</Link>
         </li>
       </ul>
       <div className='hidden md:flex'>
