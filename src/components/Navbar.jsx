@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
 import logo from '../../ss/Logo1.png'
+import LoginSignup from './LoginSignup';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [navIsShown, setnavIsShown] = useState(false);
   const toggleNavIsShown = () => {
     setnavIsShown((navIsShown) => !navIsShown);
-  };
+  }; function updatelogingState(){
+    setShowSignUp(!showSignUp)
+  }
+  const [showSignUp,setShowSignUp] = useState(false)
   return (
-    <nav className='flex justify-between items-center h-20 px-4 absolute top-0 left-0 z-10 w-full text-white bg-transparent'>
+    <nav className='flex justify-between items-center h-20 px-4 absolute top-0 left-0 z-10 w-full text-white bg-black'>
     <img src={logo} id='logo' className='logo'></img>
       <ul className='hidden md:flex'>
         <li>
-          <a href=''>Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href=''>Destinations</a>
+          <Link to="/destinations">Destinations</Link>
         </li>
         <li>
-          <a href=''>Travel</a>
+          <Link to="/hotels">Hotels</Link>
         </li>
         <li>
-          <a href=''>Views</a>
-        </li>
-        <li>
-          <a href=''>Book</a>
+          <Link to="/travel">Views</Link>
         </li>
       </ul>
       <div className='hidden md:flex'>
@@ -33,21 +35,8 @@ const Navbar = () => {
           viewBox='0 0 24 24'
           strokeWidth={1.5}
           stroke='currentColor'
-          className='w-6 h-6 mr-2'
-        >
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            d='M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z'
-          />
-        </svg>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 24 24'
-          strokeWidth={1.5}
-          stroke='currentColor'
-          className='w-6 h-6'
+          className='w-6 h-6 cursor-pointer'
+          onClick={updatelogingState}
         >
           <path
             strokeLinecap='round'
@@ -114,6 +103,8 @@ const Navbar = () => {
           <button className='w-full mb-4 btn'>Account</button>
         </div>
       )}
+      {showSignUp ?<LoginSignup setShowSignUp={updatelogingState}/>:<></>}
+      
     </nav>
   );
 };

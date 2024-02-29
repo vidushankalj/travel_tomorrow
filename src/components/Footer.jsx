@@ -1,25 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className='bg-gray-200 py-8'>
       <div className='container px-4 sm:flex justify-between items-center'>
-        <h1 className='px-2'>Beaches.</h1>
+        <h1 className='px-2'>Travel Tommorow</h1>
         <ul className='flex flex-wrap'>
           <li className='p-0 px-2'>
-            <a href=''>Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className='p-0 px-2'>
-            <a href=''>Destinations</a>
+            <Link to="/destinations">Destinations</Link>
           </li>
           <li className='p-0 px-2'>
-            <a href=''>Travel</a>
+            <Link to=''>Travel</Link>
           </li>
           <li className='p-0 px-2'>
-            <a href=''>Views</a>
+            <Link to=''>Views</Link>
           </li>
           <li className='p-0 px-2'>
-            <a href=''>Book</a>
+            <Link to=''>Book</Link>
           </li>
         </ul>
       </div>
