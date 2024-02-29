@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+
 import Selection from '../components/Selection'
-import Carousel from '../components/Carousel';
-import Footer from '../components/Footer';
+import bgVideo from '../assets/Hotel_Video.mp4';
+
 
 
   const destinations = [
@@ -17,8 +17,25 @@ import Footer from '../components/Footer';
 function Hotels() {
   return (
     <>
-    <Carousel/>
     <div className="container mx-auto mt-8">
+
+    <video
+        src={bgVideo}
+        className='w-full h-full object-cover mb-4'
+        autoPlay
+        loop
+        muted
+      />
+      <div className='absolute top-0 left-0 w-full h-full bg-gray-900/30'></div>
+
+      {/* <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="text-center text-white font-custom">
+          <h1 className="text-4xl font-bold mb-4">Hotels & Resturants</h1>
+          <p className="text-lg mb-8">Indulge in luxury and comfort at Sri Lanka's exquisite hotels and restaurants. From beachfront resorts offering panoramic views of the Indian Ocean to charming boutique hotels nestled in the heart of cultural cities, the accommodation options are as diverse as the island itself. Immerse yourself in the culinary delights of Sri Lanka, where traditional spices and flavors come to life. Whether you're savoring authentic Sri Lankan cuisine in a local eatery or dining in a world-class restaurant, the gastronomic experience is nothing short of exceptional. Discover a blend of warm hospitality, mouthwatering dishes, and elegant accommodations that make Sri Lanka a perfect destination for those seeking a memorable and immersive travel experience.</p>
+        </div>
+      </div> */}
+
+
       <h1 className="text-4xl font-bold mb-6">Hotels & Resturants</h1>
 
       <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-2">
