@@ -99,8 +99,6 @@ const Navbar = () => {
               <a href=''>Book</a>
             </li>
           </ul>
-          <button className='w-full mb-4 btn'>Search</button>
-          <button className='w-full mb-4 btn'>Account</button>
         </div>
       )}
       {showSignUp ?<LoginSignup setShowSignUp={updatelogingState}/>:<></>}

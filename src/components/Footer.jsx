@@ -8,16 +8,16 @@ const Footer = () => {
         <h1 className='px-2'>Travel Tommorow</h1>
         <ul className='flex flex-wrap'>
           <li className='p-0 px-2'>
-            <Link to="/">Home</Link>
+            <Link to="/">About</Link>
           </li>
           <li className='p-0 px-2'>
-            <Link to="/destinations">Destinations</Link>
+            <Link to="/destinations">Email</Link>
           </li>
           <li className='p-0 px-2'>
-            <Link to=''>Travel</Link>
+            <Link to=''>Contact Us</Link>
           </li>
           <li className='p-0 px-2'>
-            <Link to=''>Views</Link>
+            <Link to=''>Review</Link>
           </li>
           <li className='p-0 px-2'>
             <Link to=''>Book</Link>

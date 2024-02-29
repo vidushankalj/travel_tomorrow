@@ -1,8 +1,9 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+
 import Selection from '../components/Selection'
-import Carousel from '../components/Carousel';
-import Footer from '../components/Footer';
+import HotelVideo from '../assets/Hotel_Video.mp4';
+import Pageshero from '../components/Pageshero';
+
 
 
   const destinations = [
@@ -17,8 +18,11 @@ import Footer from '../components/Footer';
 function Hotels() {
   return (
     <>
-    <Carousel/>
-    <div className="container mx-auto mt-8">
+     
+      <Pageshero bgVideo={HotelVideo} title={"A Tapestry of Luxury Hotels and Culinary Delights"} message={"Experience Sri Lanka's allure in its elegant hotels and vibrant restaurants. From opulent accommodations to delectable local flavors, immerse yourself in unmatched hospitality amid the island's enchanting beauty."}/>
+
+      <div className="container mx-auto mt-8 w-full">
+
       <h1 className="text-4xl font-bold mb-6">Hotels & Resturants</h1>
 
       <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-2">
