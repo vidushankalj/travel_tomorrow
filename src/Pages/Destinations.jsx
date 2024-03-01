@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
 import Selection from '../components/Selection';
 import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
