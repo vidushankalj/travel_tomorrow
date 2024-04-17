@@ -1,0 +1,65 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 4px;
+    z-index: -50;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -30;
+  }
+  
+  .content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -10;
+  }
+  
+  .text-container {
+    text-align: center;
+    color: white;
+    font-family: 'custom', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .message {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    width: 50%;
+    align-self: center;
+  }
+  

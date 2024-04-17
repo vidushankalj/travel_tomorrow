@@ -1,0 +1,67 @@
+
+.ft-bg-gray-200 {
+    background-color: #e5e5e5;
+  }
+  
+  .ft-py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .ft-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .ft-px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .ft-sm-flex {
+    display: flex;
+  }
+  
+  .ft-justify-between {
+    justify-content: space-between;
+  }
+  
+  .ft-items-center {
+    align-items: center;
+  }
+  
+  .ft-px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .ft-h1 {
+    font-size: 2em;
+  }
+  
+  .ft-flex {
+    display: flex;
+  }
+  
+  .ft-flex-wrap {
+    flex-wrap: wrap;
+  }
+  
+  .ft-p-0 {
+    padding: 0;
+  }
+  
+  .ft-px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .ft-link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+ 
+  .ft-footer {
+  }
+  
