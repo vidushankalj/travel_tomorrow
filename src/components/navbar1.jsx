@@ -6,10 +6,9 @@ import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 
 
-// search-thin.svg is required
-
 function NavBar1() {
   const [ismobile, setismobile] = useState(false);
+  
   function handleMenuBtnClick() {
     setismobile(!ismobile);
     if (ismobile){
@@ -23,7 +22,7 @@ function NavBar1() {
         <img src={logo} alt="logo.svg" id="logo-img" />
       </div>
       <ul className={ismobile ? "link-list menu-open" : "link-list"}>
-        <Link to="/" className="link-item active">
+        <Link to="/" className="link-item">
           <li
             className="link-text"
             onClick={() => {
