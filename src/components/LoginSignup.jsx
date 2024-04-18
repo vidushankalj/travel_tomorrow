@@ -59,7 +59,7 @@ const LoginSignup = (props) => {
   };
 
   return (
-    <div className="w-96 mx-auto mt-10 absolute top-1/2 left-1/2 -translate-x-1/2 bg-white">
+    <div className="w-96 mx-auto mt-10 absolute top-1/2 left-1/2 -translate-x-1/2 bg-white z-50 -translate-y-60 ">
       <div className="flex border-b border-gray-200">
         <button
           className={`px-4 py-2 w-1/2 text-center text-black ${

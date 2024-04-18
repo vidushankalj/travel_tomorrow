@@ -154,7 +154,7 @@
     transform:translateY(-600%) rotate(-45deg)
     }
     
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:1070px) {
     .menu-btn {
     display:inline-block;
     z-index: 999;
