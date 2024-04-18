@@ -6,13 +6,14 @@ import Destinationspage from "../Pages/Destinationspage";
 import Hotelspage from "../Pages/Hotelspage";
 import TravelPlacePage from "../Pages/TravelPlacePage";
 import Hotels from "../Pages/Hotels";
+import NavBar1 from "./navbar1";
 
 export default function Router() {
     
     const Layout = () => {
         return (
             <>
-                <Navbar />
+                <NavBar1 />
                 <Outlet />
                 <Footer />
             </>
