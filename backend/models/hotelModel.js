@@ -29,4 +29,4 @@ const userSchema = new Schema({
     }
 }, { timestamps: true })
 
-module.exports = mongoose.model('Hotels', userSchema)
+module.exports = mongoose.model('Hotel', userSchema)
