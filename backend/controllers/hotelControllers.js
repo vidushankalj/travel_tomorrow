@@ -26,11 +26,11 @@ const getHotel = async (req, res) => {
 
 // create new hotel
 const addHotel = async (req, res) => {
-    const {addHotel, getHotels, getHotel, deleteHotel, updateHotel} = req.body
+    const {hotelName, address, town, details, googleMap, contactNum} = req.body
 
     // add doc to db
     try {
-        const hotel = await Hotel.create({firstName, lastName, email, phone, gender, password})
+        const hotel = await Hotel.create({hotelName, address, town, details, googleMap, contactNum})
         res.status(200).json(hotel)
     } catch (error) {
         res.status(400).json({error: error.message})
