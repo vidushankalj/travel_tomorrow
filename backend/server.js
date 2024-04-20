@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const usersRoutes = require('./routes/users')
 const hotelRoutes = require('./routes/hotels')
+const destinationRoutes = require('./routes/destinations')
 const bodyParser = require('body-parser')
 
 // express app
@@ -30,6 +31,7 @@ app.use((req, res, next) => {
 // routes
 app.use('/api/users', usersRoutes)
 app.use('/api/hotels', hotelRoutes)
+app.use('/api/destination', destinationRoutes)
 
 // connect to db
 mongoose.connect(process.env.MONGO_URI)

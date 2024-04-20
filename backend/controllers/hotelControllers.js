@@ -1,4 +1,4 @@
-const User = require('../models/hotelModel')
+const Hotel = require('../models/hotelModel')
 const mongoose = require('mongoose')
 
 // get all hotels
