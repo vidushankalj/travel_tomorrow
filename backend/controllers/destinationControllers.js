@@ -24,7 +24,21 @@ const getDestination = async (req, res) => {
     res.status(200).json(destination)
 }
 
+// create new destination
+const addDestination = async (req, res) => {
+    const {city, district, details, destinationMap} = req.body
+
+    // add doc to db
+    try {
+        const destination = await Destination.create({city, district, details, destinationMap})
+        res.status(200).json(destination)
+    } catch (error) {
+        res.status(400).json({error: error.message})
+    }
+}
+
 module.exports = {
     getDestinations,
-    getDestination
+    getDestination,
+    addDestination
 }
