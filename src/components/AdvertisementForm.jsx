@@ -25,8 +25,11 @@ const AdvertisementForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your submission logic here
     console.log(formData);
+  };
+
+  const handleCancel = () => {
+    console.log("Form closed");
   };
 
   return (
@@ -81,7 +84,10 @@ const AdvertisementForm = () => {
           value={formData.contactNumber}
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+        <div className="button-container">
+          <button type="submit">Submit</button>
+          <button type="button" onClick={handleCancel}>Cancel</button>
+        </div>
       </form>
     </div>
   );
