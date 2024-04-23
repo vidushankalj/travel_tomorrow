@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../Styles/navbar1.css";
 import logo from '../../ss/Logo2 bt.png';
 import searchIcon from "../assets/search-thin.svg";
+import LoginSignup from './LoginSignup';
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 
@@ -9,6 +10,11 @@ import { FaUserCircle } from "react-icons/fa";
 // search-thin.svg is required
 
 function NavBar1() {
+  const [open, setopen] = useState(false);
+  function openform() {
+    setopen(!open)
+    console.log(open);
+  }
   const [ismobile, setismobile] = useState(false);
   function handleMenuBtnClick() {
     setismobile(!ismobile);
@@ -70,9 +76,11 @@ function NavBar1() {
            Views
           </li>
         </Link>
+        <li className="link-text"><FaUserCircle size={"1.5rem"} className="nav-fa-user-circle" onClick={openform}/></li>
+        
+      
       </ul>
       <div className="nav-icons">
-      <FaUserCircle size={"1.5rem"} className="nav-fa-user-circle"/>
       
       <div className="search-bar">
           <img src={searchIcon} alt={searchIcon} id="search-icon" />
@@ -88,8 +96,10 @@ function NavBar1() {
         <span className="menu-bar" id="bar2"></span>
         <span className="menu-bar" id="bar3"></span>
       </div>
+      {open?<LoginSignup />:""}
+      
     </nav>
   );
 }
 
-export default NavBar1;
+export default NavBar1;
