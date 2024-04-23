@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Selection from '../components/Selection';
 import DesVideo from '../assets/Des_Video.mp4';
 import Pageshero from '../components/Pageshero';
@@ -15,21 +16,25 @@ const DestinationsPage = () => {
     // Add more destinations as needed
   ];
 
+  const navigate = useNavigate();
+
+  const handleDestinationClick = (destination) => {
+    navigate(`/travel/${destination.id}`, { state: { destination } });
+  };
+
   return (
     <>
-      
       <Pageshero bgVideo={DesVideo} title={"Discover The beauty Of Sri Lanka"} message={"Sri Lanka beckons with its enchanting landscapes, from lush tea plantations carpeting rolling hills to pristine beaches kissed by turquoise waters. Embrace the serenity of ancient ruins and vibrant wildlife, making it a captivating haven for all seekers of natural wonders."}/>
 
       <div className="container mx-auto mt-8 w-full">
-      
-      <h1 className="text-4xl font-bold mb-6">Destinations</h1>
+        <h1 className="text-4xl font-bold mb-6">Destinations</h1>
 
-      <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-2">
-        {destinations.map((destination) => (
-            <Selection figure={destination.image} caption={destination.name}/>
-        ))}
+        <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-2">
+          {destinations.map((destination) => (
+            <Selection key={destination.id} figure={destination.image} caption={destination.name} onClick={() => handleDestinationClick(destination)} />
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 };

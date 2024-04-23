@@ -224,7 +224,7 @@ const Navbar = () => {
               <a href=''>Travel</a>
             </li>
             <li className='nav-border-b-2 nav-border-b-gray-600'>
-              <a href=''>Views</a>
+              <a href=''>Events</a>
             </li>
             <li className='nav-border-b-2 nav-border-b-gray-600'>
               <a href=''>Book</a>
