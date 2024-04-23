@@ -45,16 +45,13 @@ const Footer = () => {
             <Link to="/" className="ft-link">About</Link>
           </li>
           <li className='ft-p-0 ft-px-2'>
-            <Link to="/destinations" className="ft-link">Email</Link>
+            <Link to="/AdvertisementForm" className="ft-link">Advertise With Us</Link>
           </li>
           <li className='ft-p-0 ft-px-2'>
             <Link to='' className="ft-link">Contact Us</Link>
           </li>
           <li className='ft-p-0 ft-px-2'>
             <Link to='' className="ft-link">Review</Link>
-          </li>
-          <li className='ft-p-0 ft-px-2'>
-            <Link to='' className="ft-link">Book</Link>
           </li>
         </ul>
       </div>
