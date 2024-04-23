@@ -31,11 +31,22 @@
 // export default Footer;
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/Footer.css';
+import AdvertisementForm from './AdvertisementForm';
 
 const Footer = () => {
+  const [showAdForm, setShowAdForm] = useState(false);
+
+  const openAdForm = () => {
+    setShowAdForm(prevState => !prevState);
+  };
+
+  const closeAdForm = () => {
+    setShowAdForm(false);
+  };
+
   return (
     <footer className='ft-bg-gray-200 ft-py-8 ft-footer'>
       <div className='ft-container ft-px-4 ft-sm-flex ft-justify-between ft-items-center'>
@@ -45,7 +56,7 @@ const Footer = () => {
             <Link to="/" className="ft-link">About</Link>
           </li>
           <li className='ft-p-0 ft-px-2'>
-            <Link to="/AdvertisementForm" className="ft-link">Advertise With Us</Link>
+            <button className="ft-link" onClick={openAdForm}>Advertise With Us</button>
           </li>
           <li className='ft-p-0 ft-px-2'>
             <Link to='' className="ft-link">Contact Us</Link>
@@ -55,8 +66,16 @@ const Footer = () => {
           </li>
         </ul>
       </div>
+      {showAdForm && (
+        <div className="ft-modal">
+          <div className="ft-modal-content">
+            <button className="ft-modal-close" onClick={closeAdForm}>X</button>
+            <AdvertisementForm onClose={closeAdForm} />
+          </div>
+        </div>
+      )}
     </footer>
   );
 };
 
-export default Footer;
+export default Footer;
