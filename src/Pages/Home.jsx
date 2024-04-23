@@ -5,6 +5,7 @@ import Selections from '../components/Selections'
 import Carousel from '../components/Carousel'
 import Featuringevents from '../components/Featuringevents'
 
+
 function Home() {
   return (
     <>
