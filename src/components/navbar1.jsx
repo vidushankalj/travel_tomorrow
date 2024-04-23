@@ -72,7 +72,7 @@ function NavBar1() {
               document.getElementById("root").classList.remove("noscroll")
             }}
           >
-           Views
+           Events
           </li>
         </Link>
         <li className="link-text"><FaUserCircle size={"1.5rem"} className="nav-fa-user-circle" onClick={openform}/></li>
