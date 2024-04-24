@@ -52,30 +52,32 @@
 import React, { useEffect } from 'react';
 import '../Styles/Hero.css';
 import { useState } from 'react';
-import axios from 'axios';
 
 import bgVideo from '../assets/beachVid.mp4';
 
 const Hero = () => {
-  const [searchResult, setSearchResult] = useState([])
-  const [key, setKey] = useState("")
+  const [input, setInput] = useState("");
+  const [searchResults, setSearchResults] = useState("")
 
-  useEffect(() => {
-    const search = async () => {
-      try {
-        if (!key.trim()){
-          setSearchResult([])
-          return
-        }
-        const res = await axios.get("http://localhost:8000/api/destinations", {params: {key: key, limit: 5}})
-        setSearchResult(res.data)
-        console.log(res);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    search()
-  }, [key])
+  const fetchData = (value) => {
+    fetch("http://localhost:8000/api/destinations")
+    .then((response) => response.json())
+    .then(json => {
+      const results = json.filter((destinations) => {
+        return (
+          value && 
+          destinations && 
+          destinations.city && 
+          destinations.city.toLowerCase().includes(value))
+      })
+      setSearchResults(results);
+    })
+  }
+
+  const handleChange = (value) => {
+    setInput(value)
+    fetchData(value)
+  }
  
   return (
     <header>
@@ -94,8 +96,8 @@ const Hero = () => {
           <input
             type='text'
             placeholder='Search Destinations'
-            value={key}
-            onChange={(e) => setKey(e.target.value)}
+            value={input}
+            onChange={(e) => handleChange(e.target.value)}
             className='grow bg-transparent outline-none'
           />
           <button className='w-11'>
@@ -115,9 +117,9 @@ const Hero = () => {
             </svg>
           </button>
         </form>
-        {searchResult && searchResult.length > 0 && (
+        {searchResults && searchResults.length > 0 && (
             <div className='search-result'>
-              {searchResult.map(destinations => (
+              {searchResults.map(destinations => (
                 <div className='result-item' key={destinations._id}>
                   <div className='destination-info'>
                     <button className='city'>{destinations.city}</button>
