@@ -23,7 +23,7 @@ function Destinations() {
         <h1 className="text-4xl font-bold mb-6">Destinations</h1>
         <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-2">
           {destinations.map((destination) => (
-            <Link to={`/travel/${destination.id}`} key={destination.id}>
+            <Link to={`/tPlace/${destination.id}`} key={destination.id}>
               <Selection figure={destination.image} caption={destination.name} />
             </Link>
           ))}

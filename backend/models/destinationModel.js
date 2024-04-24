@@ -19,6 +19,6 @@ const userSchema = new Schema({
         type: String,
         required: true
     }
-}, { timestamps: true })
+}, { timestamps: true }) 
 
 module.exports = mongoose.model('Destination', userSchema)

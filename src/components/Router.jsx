@@ -30,6 +30,7 @@ export default function Router() {
                         <Route path="destinations" element={<Destinationspage />} />
                         <Route path="hotels" element={<Hotels />} />
                         <Route path="travel" element={<Eventpage/>} />
+                        <Route path="tPlace" element={<TravelPlacePage/>}/>
                     </Route>
                 </Routes>
             </BrowserRouter>
