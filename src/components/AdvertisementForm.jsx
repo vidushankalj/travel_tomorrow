@@ -2,33 +2,53 @@
 import React, { useState } from 'react';
 import "../Styles/AdvertisementForm.css";
 
-const AdvertisementForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    images: [],
-    address: '',
-    town: '',
-    details: '',
-    mapLink: '',
-    contactNumber: ''
-  });
+const AdvertisementForm = (props) => {
+  const [hotelName, setName] = useState('')
+  const [address, setAddress] = useState('')
+  const [town, setTown] = useState('')
+  const [details, setDetails] = useState('')
+  const [googleMap, setMapLink] = useState('')
+  const [contactNum, setContactNumber] = useState('')
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleImageChange = (e) => {
-    const images = Array.from(e.target.files);
-    setFormData({ ...formData, images });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    const hotel = {hotelName, address, town, details, googleMap, contactNum}
+
+    const response = await fetch('http://localhost:8000/api/hotels', {
+      method: 'POST',
+      body: JSON.stringify(hotel),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    const json = await response.json()
+
+    if (!response.ok) {
+      alert('submit failed')
+      return
+    }
+
+    if (response.ok) {
+      setName('')
+      setAddress('')
+      setTown('')
+      setDetails('')
+      setMapLink('')
+      setContactNumber('')
+      alert('new advertisment added')
+      return
+    }
+
   };
 
   const handleCancel = () => {
+    setName('')
+    setAddress('')
+    setTown('')
+    setDetails('')
+    setMapLink('')
+    setContactNumber('')
     console.log("Form closed");
   };
 
@@ -40,49 +60,42 @@ const AdvertisementForm = () => {
           type="text"
           name="name"
           placeholder="Hotel / Restaurant Name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <input
-          type="file"
-          name="images"
-          accept="image/*"
-          multiple
-          onChange={handleImageChange}
+          value={hotelName}
+          onChange={(e) => setName(e.target.value)}
         />
         <input
           type="text"
           name="address"
           placeholder="Address"
-          value={formData.address}
-          onChange={handleChange}
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
         />
         <input
           type="text"
           name="town"
           placeholder="Town"
-          value={formData.town}
-          onChange={handleChange}
+          value={town}
+          onChange={(e) => setTown(e.target.value)}
         />
         <textarea
           name="details"
           placeholder="Details"
-          value={formData.details}
-          onChange={handleChange}
+          value={details}
+          onChange={(e) => setDetails(e.target.value)}
         />
         <input
           type="text"
           name="mapLink"
           placeholder="Google Map Link"
-          value={formData.mapLink}
-          onChange={handleChange}
+          value={googleMap}
+          onChange={(e) => setMapLink(e.target.value)}
         />
         <input
           type="text"
           name="contactNumber"
           placeholder="Contact Number"
-          value={formData.contactNumber}
-          onChange={handleChange}
+          value={contactNum}
+          onChange={(e) => setContactNumber(e.target.value)}
         />
         <div className="button-container">
           <button type="submit">Submit</button>
