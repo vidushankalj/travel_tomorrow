@@ -4,6 +4,7 @@ import Search from '../components/Search'
 import Selections from '../components/Selections'
 import Carousel from '../components/Carousel'
 import Featuringevents from '../components/Featuringevents'
+import SerchResultPage from './SerchResultPage'
 
 
 function Home() {
