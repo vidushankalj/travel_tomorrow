@@ -29,7 +29,7 @@ export default function Router() {
                         <Route path="/" element={<Home />} />
                         <Route path="destinations" element={<Destinationspage />} />
                         <Route path="hotels" element={<Hotels />} />
-                        <Route path="travel" element={<Eventpage/>} />
+                        <Route path="travel" element={<TravelPlacePage/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>

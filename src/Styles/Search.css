@@ -70,7 +70,7 @@
   }
   
   .ser-border {
-    border: 1px solid #e2e8f0;
+    border: 1px solid #000000;
   }
   
   .ser-py-4 {
@@ -123,4 +123,10 @@
     background-color: #2d3748; 
     border-color: #2d3748; 
   }
+
+  .form-container {
+    border: 1px solid black;
+    background-color: #5f5b5bb0;
+    padding: 20px;
+}
   
