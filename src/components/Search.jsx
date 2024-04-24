@@ -91,7 +91,7 @@ const Search = () => {
     <section className='ser-container ser-px-4 ser-my-16 ser-grid ser-gap-8 md:grid-cols-3'>
       <div className='md:col-span-2'>
         <h3 className='ser-uppercase ser-font-extrabold ser-mb-4'>
-          luxury included vacations for two people
+          Place Your Reservation From Here
         </h3>
         <p className='ser-mb-10 ser-text-gray-600 ser-text-justify'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut assumenda
