@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 import Selection from '../components/Selection'
 import HotelVideo from '../assets/Hotel_Video.mp4';
 import Pageshero from '../components/Pageshero';
@@ -27,7 +27,9 @@ function Hotels() {
 
       <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-2">
         {destinations.map((destination) => (
+          <Link to='/tPlace'>
             <Selection figure={destination.image} caption={destination.name}/>
+          </Link>  
         ))}
       </div>
     </div>

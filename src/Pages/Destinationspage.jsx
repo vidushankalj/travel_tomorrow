@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Selection from '../components/Selection';
 import DesVideo from '../assets/Des_Video.mp4';
 import Pageshero from '../components/Pageshero';
+import { Link } from "react-router-dom";
 
 const DestinationsPage = () => {
   // Dummy data for destinations
@@ -31,9 +32,13 @@ const DestinationsPage = () => {
 
         <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-2">
           {destinations.map((destination) => (
+            <Link to='/tPlace'>
             <Selection key={destination.id} figure={destination.image} caption={destination.name} onClick={() => handleDestinationClick(destination)} />
+            </Link>
           ))}
+          
         </div>
+        
       </div>
     </>
   );
