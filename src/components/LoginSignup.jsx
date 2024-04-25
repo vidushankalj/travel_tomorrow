@@ -58,6 +58,18 @@ const LoginSignup = (props) => {
     
   };
 
+  const handleCancel = (e) => {
+    e.preventDefault();
+    setFirstName('')
+    setLastName('')
+    setEmail('')
+    setPhone('')
+    setGender('')
+    setPassword('')
+    setConfirmPassword('')
+    return
+  }
+
   return (
     <div className="w-96 mx-auto mt-10 absolute top-1/2 left-1/2 -translate-x-1/2 bg-white z-50 -translate-y-60 ">
       <div className="flex border-b border-gray-200">
@@ -157,7 +169,7 @@ const LoginSignup = (props) => {
               <button
                 type="cancel"
                 className="w-full py-2 bg-blue-500 text-white rounded"
-                onClick={props.setShowSignUp}
+                onClick={handleCancel}
               >
                 Cancel
               </button>
