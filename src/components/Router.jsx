@@ -8,6 +8,7 @@ import TravelPlacePage from "../Pages/TravelPlacePage";
 import Hotels from "../Pages/Hotels";
 import NavBar1 from "./navbar1";
 import Eventpage from "../Pages/Eventpage";
+import SerchResultPage from "../Pages/SerchResultPage";
 
 export default function Router() {
     
@@ -31,6 +32,7 @@ export default function Router() {
                         <Route path="hotels" element={<Hotels />} />
                         <Route path="travel" element={<Eventpage/>} />
                         <Route path="tPlace" element={<TravelPlacePage/>}/>
+                        <Route path="Search" element={<SerchResultPage/>}/>
                     </Route>
                 </Routes>
             </BrowserRouter>
