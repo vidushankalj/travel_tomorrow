@@ -9,7 +9,7 @@ const TravelPlacePage = () => {
     "https://placekitten.com/802/400",
     // Add more image URLs as needed
   ];
-  const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus orci eget quam ultrices aliquet. Sed euismod nulla at sapien dignissim, a faucibus tellus facilisis. Phasellus auctor erat id dui dapibus luctus. In hac habitasse platea dictumst.";
+  const description = "Sri Lanka, known as the Pearl of the Indian Ocean, is a tropical paradise with a rich history, stunning landscapes, and vibrant culture. One of its most famous destinations is the ancient city of Kandy, home to the sacred Temple of the Tooth Relic, which houses a tooth of the Buddha. Another must-visit location is the Sigiriya rock fortress, a UNESCO World Heritage Site that offers breathtaking views from its summit. The coastal town of Galle is renowned for its well-preserved Dutch colonial architecture and picturesque beaches. Sri Lanka's tea country, around Nuwara Eliya, is known for its lush green tea plantations and cool climate. Wildlife enthusiasts flock to Yala National Park, one of the best places in the world to spot leopards, elephants, and a variety of bird species. Sri Lanka's diverse attractions make it a truly enchanting destination for travelers.";
   const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.116961562762!2d<LONGITUDE>!3d<LATITUDE>!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQwJzIwLjMiTiA2McKwMTAnMjUuNSJF!5e0!3m2!1sen!2sus!4v1648627552401!5m2!1sen!2sus";
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
