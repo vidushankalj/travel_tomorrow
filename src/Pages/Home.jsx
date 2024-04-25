@@ -2,8 +2,10 @@ import React from 'react'
 import Hero from '../components/Hero'
 import Search from '../components/Search'
 import Selections from '../components/Selections'
-import Destinations from '../components/Destinations'
 import Carousel from '../components/Carousel'
+import Featuringevents from '../components/Featuringevents'
+import SerchResultPage from './SerchResultPage'
+
 
 function Home() {
   return (

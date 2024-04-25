@@ -14,22 +14,64 @@ const LoginSignup = (props) => {
     setTab(selectedTab);
   };
 
-  const handleSignup = (e) => {
+  // handle signup
+  const handleSignup = async (e) => {
     e.preventDefault();
+
+    const user = {firstName, lastName, email, phone, gender, password}
+
     if (password !== confirmPassword) {
-      alert('Passwords do not match');
-      return;
+      alert('Passwords do not match')
+      return
     }
-    // Handle signup logic
+
+    const response = await fetch('http://localhost:8000/api/users', {
+      method: 'POST',
+      body: JSON.stringify(user),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    const json = await response.json()
+
+    if (!response.ok) {
+      alert('signup failed')
+      return
+    }
+
+    if (response.ok) {
+      setFirstName('')
+      setLastName('')
+      setEmail('')
+      setPhone('')
+      setGender('')
+      setPassword('')
+      setConfirmPassword('')
+      alert('new user added')
+      return
+    }
   };
 
+  // handle login
   const handleLogin = (e) => {
     e.preventDefault();
-    // Handle login logic
+    
   };
 
+  const handleCancel = (e) => {
+    e.preventDefault();
+    setFirstName('')
+    setLastName('')
+    setEmail('')
+    setPhone('')
+    setGender('')
+    setPassword('')
+    setConfirmPassword('')
+    return
+  }
+
   return (
-    <div className="w-96 mx-auto mt-10 absolute top-1/2 left-1/2 -translate-x-1/2 bg-white">
+    <div className="w-96 mx-auto mt-10 absolute top-1/2 left-1/2 -translate-x-1/2 bg-white z-50 -translate-y-60 ">
       <div className="flex border-b border-gray-200">
         <button
           className={`px-4 py-2 w-1/2 text-center text-black ${
@@ -127,7 +169,7 @@ const LoginSignup = (props) => {
               <button
                 type="cancel"
                 className="w-full py-2 bg-blue-500 text-white rounded"
-                onClick={props.setShowSignUp}
+                onClick={handleCancel}
               >
                 Cancel
               </button>

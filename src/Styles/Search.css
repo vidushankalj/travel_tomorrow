@@ -1,0 +1,132 @@
+
+.ser-container {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .ser-px-4 {
+    padding: 0 1rem; /* 4px */
+  }
+  
+  .ser-my-16 {
+    margin-top: 4rem; /* 16px */
+    margin-bottom: 4rem; /* 16px */
+  }
+  
+  .ser-grid {
+    display: grid;
+  }
+  
+  .ser-gap-8 {
+    gap: 2rem;
+  }
+  
+  .ser-md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .ser-col-span-2 {
+    grid-column: span 2;
+  }
+  
+  .ser-uppercase {
+    text-transform: uppercase;
+  }
+  
+  .ser-font-extrabold {
+    font-weight: 800;
+  }
+  
+  .ser-mb-4 {
+    margin-bottom: 1rem; /* 4px */
+  }
+  
+  .ser-text-gray-600 {
+    color: #000000; /* Replace with your desired text color */
+  }
+  
+  .ser-text-justify {
+    text-align: justify;
+  }
+  
+  .ser-flex {
+    display: flex;
+  }
+  
+  .ser-flex-col {
+    flex-direction: column;
+  }
+  
+  .ser-sm\:flex-row {
+    flex-direction: row;
+  }
+  
+  .ser-text-center {
+    text-align: center;
+  }
+  
+  .ser-mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .ser-border {
+    border: 1px solid #000000;
+  }
+  
+  .ser-py-4 {
+    padding-top: 1rem; 
+    padding-bottom: 1rem; 
+  }
+  
+  .ser-cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .ser-bg-black {
+    background-color: #000000; 
+  }
+  
+  .ser-block {
+    display: block;
+  }
+  
+  .ser-w-full {
+    width: 100%;
+  }
+  
+  .ser-p-2 {
+    padding: 0.5rem;
+  }
+  
+  .ser-rounded {
+    border-radius: 0.375rem; 
+  }
+  
+  .ser-btn {
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.375rem; 
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .ser-btn:hover {
+    color: #ffffff; 
+    background-color: #2d3748; 
+    border-color: #2d3748; 
+  }
+
+  .form-container {
+    border: 1px solid black;
+    background-color: #5f5b5bb0;
+    padding: 20px;
+}
+  

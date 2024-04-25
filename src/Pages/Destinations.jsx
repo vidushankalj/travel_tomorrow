@@ -1,6 +1,6 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
+import React from 'react';
+import { Link } from 'react-router-dom'; 
+import Navbar from '../components/Navbar';
 import Selection from '../components/Selection';
 import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
@@ -15,28 +15,24 @@ const destinations = [
   // Add more destinations as needed
 ];
 
-import bgVideo from '../assets/beachVid.mp4';
-
 function Destinations() {
   return (
     <>
-    <Navbar/>
-
-    
-
-    <div className="container mx-auto mt-8">
-      <h1 className="text-4xl font-bold mb-6">Destinations</h1>
-
-      <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-2">
-        {destinations.map((destination) => (
-            <Selection figure={destination.image} caption={destination.name}/>
-        ))}
+      <Navbar />
+      <div className="container mx-auto mt-8">
+        <h1 className="text-4xl font-bold mb-6">Destinations</h1>
+        <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-2">
+          {destinations.map((destination) => (
+            <Link to={`/tPlace/${destination.id}`} key={destination.id}>
+              <Selection figure={destination.image} caption={destination.name} />
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
-    <Carousel/>
-    <Footer/>
+      <Carousel />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default Destinations
+export default Destinations;

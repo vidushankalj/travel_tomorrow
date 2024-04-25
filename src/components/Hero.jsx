@@ -1,33 +1,65 @@
-import React from 'react';
 
+import React, { useEffect } from 'react';
+import '../Styles/Hero.css';
+import { useState } from 'react';
+import { Link } from "react-router-dom";
 import bgVideo from '../assets/beachVid.mp4';
 
 const Hero = () => {
+  const [input, setInput] = useState("");
+  const [searchResults, setSearchResults] = useState("")
+
+  const fetchData = (value) => {
+    fetch("http://localhost:8000/api/destinations")
+    .then((response) => response.json())
+    .then(json => {
+      const results = json.filter((destinations) => {
+        return (
+          value && 
+          destinations && 
+          destinations.city && 
+          destinations.city.toLowerCase().includes(value))
+      })
+      setSearchResults(results);
+    })
+  }
+
+  const handleChange = (value) => {
+    setInput(value)
+    fetchData(value)
+  }
+  const [ismobile, setismobile] = useState(false);
+ 
   return (
-    <header className='w-screen h-screen relative'>
+    <header>
       <video
         src={bgVideo}
-        className='w-full h-full object-cover'
+        className='w-full h-full object-cover hero-video'
         autoPlay
         loop
         muted
       />
-      <div className='absolute top-0 left-0 w-full h-full bg-gray-900/30'></div>
-      <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center text-center'>
-        <h1 className='text-white mb-2'>Explore Sri lanka,</h1>
-        <h3 className='text-white mb-4'>Where every moment is an adventure</h3>
-        <form
-          action=''
-          className='flex border p-1 rounded-md text-black bg-gray-100/90 max-w-[700px] w-[80%] mx-auto'
-        >
+      <div className='overlay'></div>
+      <div className='hero-content'>
+        <h1>Explore Sri Lanka,</h1>
+        <h3>Where every moment is an adventure</h3>
+        <form className='hero-form'>
           <input
             type='text'
             placeholder='Search Destinations'
+            value={input}
+            onChange={(e) => handleChange(e.target.value)}
             className='grow bg-transparent outline-none'
           />
-          <button className='w-11 btn--form'>
+
+          <Link to="/search" onClick={() => {
+              setismobile(false);
+              document.getElementById("root").classList.remove("noscroll")
+            }}>
+         
+            <button className='w-11'>
             <svg
-              xmlns='http://www.w3.org/2000/svg'
+              xmlns='http://www.w3.org/2000/svg' 
               fill='none'
               viewBox='0 0 24 24'
               strokeWidth={1.5}
@@ -41,7 +73,25 @@ const Hero = () => {
               />
             </svg>
           </button>
+          
+        </Link>
+
+
+
+
+          
         </form>
+        {searchResults && searchResults.length > 0 && (
+            <div className='search-result'>
+              {searchResults.map(destinations => (
+                <div className='result-item' key={destinations._id}>
+                  <div className='destination-info'>
+                    <button className='city'>{destinations.city}</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
       </div>
     </header>
   );
