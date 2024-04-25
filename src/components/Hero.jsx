@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import '../Styles/Hero.css';
 import { useState } from 'react';
-
+import { Link } from "react-router-dom";
 import bgVideo from '../assets/beachVid.mp4';
 
 const Hero = () => {
@@ -28,6 +28,7 @@ const Hero = () => {
     setInput(value)
     fetchData(value)
   }
+  const [ismobile, setismobile] = useState(false);
  
   return (
     <header>
@@ -50,9 +51,15 @@ const Hero = () => {
             onChange={(e) => handleChange(e.target.value)}
             className='grow bg-transparent outline-none'
           />
-          <button className='w-11'>
+
+          <Link to="/search" onClick={() => {
+              setismobile(false);
+              document.getElementById("root").classList.remove("noscroll")
+            }}>
+         
+            <button className='w-11'>
             <svg
-              xmlns='http://www.w3.org/2000/svg'
+              xmlns='http://www.w3.org/2000/svg' 
               fill='none'
               viewBox='0 0 24 24'
               strokeWidth={1.5}
@@ -66,6 +73,13 @@ const Hero = () => {
               />
             </svg>
           </button>
+          
+        </Link>
+
+
+
+
+          
         </form>
         {searchResults && searchResults.length > 0 && (
             <div className='search-result'>
