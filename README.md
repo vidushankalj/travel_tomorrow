@@ -18,9 +18,9 @@ Built with **React**, **Vite**, **Tailwind CSS**, and a separate backend service
 - 🛠️ Separate backend integration (Node.js / Express / other – add your stack here)
 
 <p align="center">
-  <img src="https://github.com/vidushankalj/travel_tomorrow/blob/main/appSS/2.jpg" alt="Search & Discover" width="45%"/>
+  <img src="https://github.com/vidushankalj/travel_tomorrow/blob/main/appSS/2.jpg" alt="Search & Discover" width="60%"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/vidushankalj/travel_tomorrow/blob/main/appSS/3.jpg" alt="Mobile View" width="15%"/>
+  <img src="https://github.com/vidushankalj/travel_tomorrow/blob/main/appSS/3.jpg" alt="Mobile View" width="30%"/>
 </p>
 
 ## 🛠️ Tech Stack
