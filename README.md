@@ -5,7 +5,7 @@ A modern travel planning web application to help you discover, plan, and dream a
 Built with **React**, **Vite**, **Tailwind CSS**, and a separate backend service.
 
 <p align="center">
-  <img src="[appSS/home.png](https://github.com/vidushankalj/travel_tomorrow/blob/main/appSS/1.jpg)" alt="Travel Tomorrow Home Screen" width="800"/>
+  <img src="![appSS/home.png](https://github.com/vidushankalj/travel_tomorrow/blob/main/appSS/1.jpg)" alt="Travel Tomorrow Home Screen" width="800"/>
 </p>
 
 ## ✨ Features
