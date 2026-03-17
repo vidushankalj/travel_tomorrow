@@ -20,6 +20,9 @@ Built with **React**, **Vite**, **Tailwind CSS**, and a separate backend service
 <p align="center">
   <img src="https://github.com/vidushankalj/travel_tomorrow/blob/main/appSS/2.jpg" alt="Search & Discover" width="60%"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<br>
+<p align="center">
   <img src="https://github.com/vidushankalj/travel_tomorrow/blob/main/appSS/3.jpg" alt="Mobile View" width="30%"/>
 </p>
 
